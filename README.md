@@ -1,6 +1,6 @@
 # Collinear Scratch v1.0
 
-This script automates following users on the Scratch platform.
+This scripts automates following people using scratch.mit.edu API in Python.
 
 ## Features:
 
