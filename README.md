@@ -1,4 +1,4 @@
-# Collinear Scratch
+# Collinear Scratch v1.0
 
 This script automates following users on the Scratch platform.
 
