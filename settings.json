@@ -1,0 +1,6 @@
+{
+    "cycle_time": 10,
+    "log_interval_time": 1,
+    "log_interval_cycles": 1,
+    "start_user": "0"
+}
