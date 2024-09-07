@@ -1,2 +1,2 @@
-# colinear
+# collinear
 scratch.mit.edu API
