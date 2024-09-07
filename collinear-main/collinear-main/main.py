@@ -24,27 +24,6 @@ def save_settings_to_json(filename, settings):
             json.dump(settings, f, indent=4)
     except Exception as e:
         logging.error(f"Error saving settings to JSON: {e}")
-        
-def load_paths_from_json(filename):
-    try:
-        # Get the absolute path of the current directory
-        current_dir = os.path.dirname(os.path.abspath(__file__))
-
-        # Construct the full path to the JSON file
-        json_path = os.path.join(current_dir, filename)
-
-        with open(json_path, 'r') as f:
-            paths = json.load(f)
-            return paths
-    except FileNotFoundError:
-        print(f"Error: Paths file '{filename}' not found in the current directory.")
-        return None
-    except json.JSONDecodeError as e:
-        print(f"Error decoding JSON: {e}")
-        return None
-    except Exception as e:
-        print(f"Error loading paths from JSON: {e}")
-        return None
 
 def follow_users_from_file(filename, username, password, cycle_time, log_interval_time, log_interval_cycles, log_path, settings_path, start_user=None):
 
@@ -208,18 +187,12 @@ def benchmark(filename, username, password, cycle_time, log_path):
 
 
 if __name__ == "__main__":
-    paths = load_paths_from_json("paths.json")
-
-    if paths is None:
-        print("Failed to load paths from JSON. Please check the file and its contents.")
-        exit()
-    
-    log_path = paths["log_path"]
-    settings_path = paths["settings_path"]
-    username = paths["username"]
-    password = paths["password"]
-    filename = paths["user_list"]
-    error_path = paths["error_path"]
+    log_path = '' #path to your desired log location goes here
+    settings_path = "" # path to settings.json goes here
+    username = '' #your username for your scratch account goes here
+    password = '' # your scratch account password goes here
+    filename = '' #username list goes here
+    error_path ='' #error path goes here 
     
     logging.basicConfig(filename=error_path, level=logging.ERROR)
 
