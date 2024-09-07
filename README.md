@@ -1,4 +1,4 @@
-# Collinear Scratch v1.0
+# Collinear Scratch v1.1beta
 
 This scripts automates following people using scratch.mit.edu API in Python.
 
@@ -15,7 +15,14 @@ This scripts automates following people using scratch.mit.edu API in Python.
 * Python 3
 * `scratchapi` library (install with `pip install scratchapi`)
 
-## Instructions:
+## Instructions (v1.1beta and ahead):
+
+1. **Install dependencies:** Run `pip install scratchapi` in your terminal.
+2. **Download install.py from the releases tab.**
+3. **Run the script!**
+
+
+## Instructions (Legacy):
 
 1. **Install dependencies:** Run `pip install scratchapi` in your terminal.
 2. **Configure Paths:**
